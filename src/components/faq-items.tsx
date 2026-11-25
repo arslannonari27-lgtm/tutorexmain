@@ -1,0 +1,3 @@
+import {Plus} from 'lucide-react';
+import {frequentlyAsked} from '@/lib/site';
+export function FAQItems(){return <div className="divide-y divide-navy/10 border-y border-navy/10">{frequentlyAsked.map(item=><details key={item.q} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-heading text-base font-bold text-navy [&::-webkit-details-marker]:hidden">{item.q}<Plus className="size-5 shrink-0 text-teal transition-transform group-open:rotate-45"/></summary><p className="max-w-3xl pt-3 pr-8 text-sm leading-7 text-ink/70">{item.a}</p></details>)}</div>}
